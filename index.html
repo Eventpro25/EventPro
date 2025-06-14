@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Enhance mmWave Radar with Event Cameras for Low Latency Landing Drone Localization">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[SenSys 2025] Count Every Rotation and Every Rotation Counts: Exploring Drone Dynamics via Propeller Sensing</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- MathJax Configuration and script -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Count Every Rotation and Every Rotation Counts: Exploring Drone Dynamics via Propeller Sensing</h1>
+          <div class="is-size-5 publication-authors">
+            <h1 class="title is-4 publication-title", style="color:#6e6e6e;">ACM SenSys 2025</h1>
+            <span class="author-block">
+              Anonymous authors</a></span>
+            
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=" "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href=" "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Eventpro25/EventPro"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href=" "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%"> -->
+      <!-- <video id="teaser" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/eventpro2.2.mp4"
+                type="video/mp4">
+      </video> -->
+
+      <!-- <h2 class="title is-3">Video</h2> -->
+      <div class="publication-video">
+        <iframe src="https://youtu.be/5W17EaimfM8"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <!-- <iframe src="https://www.youtube.com/embed/Sx99O1TA5YA?si=mFwfMV5NYdB8hC7a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+      <!-- <div class="image-container">
+        <img src="./static/images/airport_ape_cdf.png" alt="Image 1" width="45%">
+        <img src="./static/images/airport_rpe_cdf.png" alt="Image 2" width="45%">
+      </div> -->
+
+
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">EventPro</span> explores drone dynamics through <span class="dnerf">Event</span>-camera-based <span class="dnerf">Propeller</span> sensing
+      </h2>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          As drone-based applications proliferate, paramount contact-less sensing of airborne drones from the ground becomes
+          indispensable. In this work, we broaden our system design perspective from isolated sensors and algorithms to the entire drone flight control and propulsion system, demonstrating
+          that concentrating on propeller rotational speed will substantially improve the accuracy and efficiency of drone sensing
+          systems. Based on the insight, we propose <strong>EventPro</strong>, a comprehensive system employing advanced event cameras focusing on propeller rotation to sense drones. 
+          EventPro features
+          two components: <em>Count Every Rotation</em> achieves accurate,
+          real-time propeller speed estimation by mitigating ultra-high
+          sensitivity of event cameras to environmental noise. <em>Every Rotation Counts</em> leverages these speeds to infer both internal
+          and external drone dynamics. Extensive evaluations in real-world drone delivery scenarios show that EventPro achieves
+          a sensing latency of 3ms and a rotational speed estimation error of merely 0.23%. Additionally, EventPro infers drone flight
+          commands with 96.5% precision and improves drone tracking accuracy by over 22% when combined with other sensing
+          modalities. 
+          <!-- Artifacts will be made publicly available before publication.  -->
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Event Camera Preliminary</h2>
+        <div class="content has-text-justified">
+          <p>
+            Event cameras are bio-inspired sensors that operate asynchronously and independently for each pixel. Instead of capturing images at a fixed time interval, event cameras record asynchronous changes in pixel brightness, resulting in a stream of events with <i>microsecond</i> resolution. When a pixel detects a change in light intensity of a predefined magnitude in the scene, it immediately outputs an event \(e_k \doteq \left(\mathbf{x}_k, t_k, p_k\right)\), encoding the triggered position \(\mathbf{x}_k\), the triggered time \(t_k\), and polarity \(p_k\) (+1 for brighter and -1 for darker) of the intensity changes.
+        </p>
+        </div>
+        <img src="./static/images/event_camera.png" alt="Image 1" width="90%">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">System Overview</h2>
+        <div class="content has-text-justified">
+        <p><strong>EventPro</strong> features two components:</p>
+        <ul>
+            <li>
+                <em>Count Every Rotation</em>. We propose an accurate, real-time propeller speed estimation pipeline by mitigating ultra-high sensitivity of event cameras to environmental noise.
+            </li>
+            <li>
+                <em>Every Rotation Counts</em>. Based on the estimated propeller speed, we propose algorithms to accurately infer both the drone internal flight commands and external flight status.
+            </li>
+        </ul>
+        <img src="./static/images/overview.png" alt="Image 1" width="100%">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Implementation</h2>
+        <div class="content has-text-justified">
+          <p>We implement <strong>EventPro</strong> with a commercial event camera, the <a href="https://www.prophesee.ai/event-camera-evk4/">Prophesee EVK4 HD evaluation kit</a>, which is equipped with the IMX636ES event-based vision sensor for high-definition event data capture (1280 × 720 pixels) using the <a href="http://www.soyocctv.com/products_detail.asp?id=1218&cataid=183&list=1">Soyo SFA0820-5M lens</a>. Our implementation contains more than 20000 LOC (lines of Python code). <strong>EventPro</strong> operates on a laptop equipped with an Intel i7-12900K CPU, and 32GB RAM, running on the Ubuntu 20.04 operating system. The event camera is connected to the laptop via USB 3.0.</p>
+        </div>
+        <!-- <img src="./static/images/setup2.png" alt="Image 1" width="100%"> -->
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiment Setup</h2>
+        <h4 class="title is-4">Indoor Experiment</h4>
+
+        <div class="content has-text-justified">
+          We build a laboratory testbed featuring a rotating propeller mounted on a brushless motor shaft. The setup comprises a laptop and an <a href="https://store.arduino.cc/products/arduino-uno-rev3?_gl=1*3lnkvq*_gcl_au*NDU3MzA2NTI2LjE3MjYxMzAxNzY.*FPAU*NDU3MzA2NTI2LjE3MjYxMzAxNzY.*_ga*MTU0MDMzNTIzLjE3MjYxMzAxNzQ.*_ga_NEXN8H46L5*MTcyNjI5NDE0OC4yLjEuMTcyNjI5NDE1NS4wLjAuODA1Mjc0MzYy*_fplc*czJWZGp2eUgxVjFyR2xtQk9NVGxsYVRzT1dFdXNhaXZScWh6JTJCRmI2MXRrbUQlMkJ3RlBRRnpsdm1PTmppMklsdSUyRnJHRjU5WTF6MXVlVVYxYmJ3cTVTUW04ZWp4ZmZWbWU5ZjM2MGhQRHV1bVklMkY0QW5tTEhra3JPU1p5Skl1RGclM0QlM0Q.">Arduino Uno</a> 
+          to control the motor's speed by adjusting the duty cycle and frequency of the PWM signal. The laptop transmits the PWM parameters to the Arduino Uno via a serial port, which then relays the PWM signal to the motor's Electronic Speed Controller (ESC). 
+          An event camera was positioned in front of the propeller.
+        </div>
+        <h4 class="title is-4">Outdoor Experiment</h4>
+        <div class="content has-text-justified">
+          <p>We adopt a commercial delivery drone and conduct real-world experiments in a test field. This drone is manufactured by a company specializing in daily and city-wide instant delivery services. The drone features six propellers attached to brushless motors and is controlled by a <a href="https://docs.px4.io/main/en/">PX4</a> flight controller. An event camera was positioned on a ground-based bracket to capture the drone in flight.</p>
+        </div>
+        <img src="./static/images/setup.png" alt="Image 1" width="100%">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-four-fifths"> -->
+        <!-- <div class="columns is-centered"> -->
+      <div class="column is-full-width">
+        <h2 class="title is-3">Quantitative results</h2>
+        <h4 class="title is-4">Propeller Speed Estimation Performance</h4>
+        <img src="./static/images/overall.png" alt="Image 1" width="100%">
+        <br><br>
+        <h4 class="title is-4">Drone Internal Command Inference</h4>
+        <img src="./static/images/internal_inference.png" alt="Image 1" width="100%">
+        <br><br>
+        <h4 class="title is-4">Drone External Status Estimation</h4>
+        <img src="./static/images/external_estimation.png" alt="Image 1" width="100%">
+        <!-- <br><br>
+        <h4 class="title is-4">System Overload</h4>
+        <img src="./static/images/overload.png" alt="Image 1" width="100%"> -->
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- <hr> -->
+
+<!-- <section class="airport evaluation">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <h2 class="title is-3">Airport Evaluation</h2>
+
+      <h4 class="title is-4">Experiments Setup</h4>
+      <img src="./static/images/airport_setup.png" alt="Image 1" width="90%">
+
+      <br><br>
+      <h4 class="title is-4">Experiments Video</h4>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/outdoor.mp4"
+                type="video/mp4">
+      </video>
+
+      <br><br>
+      <h4 class="title is-4">Quantitative results</h4>
+      <div class="image-container">
+        <img src="./static/images/airport_ape_cdf.png" alt="Image 1" width="45%">
+        <img src="./static/images/airport_rpe_cdf.png" alt="Image 2" width="45%">
+      </div>
+      Absolute positon error (left) and Relative positon error (right) of the drone in the airport environment.
+    </div>
+  </div>
+</section> -->
+
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template from <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
